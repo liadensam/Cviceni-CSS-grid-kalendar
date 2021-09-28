@@ -1,10 +1,55 @@
 /* intuitivnější box-sizing */
-html { box-sizing: border-box; }
-*, ::before, ::after { box-sizing: inherit; }
+html {
+  box-sizing: border-box;
+}
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
 
 body {
-	font-family: sans-serif;
+  font-family: sans-serif;
 }
 
 /* ---------------------------------------------------- */
 
+ul {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 0.5rem;
+  padding: 0;
+  max-width: 8rem;
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  margin-left: 0;
+  background-color: #ffffff;
+  border: 1px solid #c2c2c2;
+  height: 50px;
+  width: 50px;
+}
+
+.zahlavi {
+  background-color: #ce5050;
+  color: #ffffff;
+  border: 1px solid #ce5050;
+  pointer-events: none;
+}
+
+.predchozi,
+.nasledujici {
+  background-color: #c2c2c2;
+  color: rgb(129, 129, 129);
+  border: 1px solid #c2c2c2;
+  pointer-events: none;
+}
+
+li:hover {
+  background-color: #c2c2c2;
+  cursor: pointer;
+}
